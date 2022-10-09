@@ -1,13 +1,13 @@
-package com.dudev.OOP.hometask;
+package com.dudev.oop.hometask;
 
 public class Room {
-    boolean isPassage;
+    final private boolean isPassage;
 
     Room(boolean isPassage) {
         this.isPassage = isPassage;
     }
 
-    void print() {
+    public void print() {
         if (this.isPassage) {
             System.out.println("Комната проходная");
         } else {

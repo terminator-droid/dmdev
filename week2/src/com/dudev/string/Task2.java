@@ -24,6 +24,7 @@ public class Task2 {
             intArray[i] = Integer.parseInt(String.valueOf(charArray[i]));
         }
         return intArray;
+
     }
 
     private static int sumArray(int[] numbers) {

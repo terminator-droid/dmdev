@@ -14,16 +14,14 @@ public class Task1 {
     }
 
     private static String deleteFromString(String string) {
-        StringBuilder stringBuilder = new StringBuilder(string.replaceAll("\\s*", "").toUpperCase(Locale.ROOT));
-        for (int i = 0; i < stringBuilder.length() - 1; i++) {
-            while (stringBuilder.charAt(i) == stringBuilder.charAt(i + 1)) {
-                stringBuilder.deleteCharAt(i);
-                if (i == stringBuilder.length() - 1) {
-                    break;
-                }
+        StringBuilder result = new StringBuilder().append(string.charAt(0));
+        for (int i = 1; i < string.length(); i++) {
+            char currentChar = string.charAt(i);
+            char previousChar = result.charAt(result.length() - 1);
+            if (previousChar != currentChar && currentChar != ' ') {
+                result.append(currentChar);
             }
         }
-        return stringBuilder.toString();
+        return result.toString();
     }
-
 }

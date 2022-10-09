@@ -11,20 +11,24 @@ public class Task2 {
     public static void main(String[] args) {
         char[] symbols = {'d', '3', 'd', 'g'};
         int[] values = getCharCode(symbols);
-        printValuesGTAVG(values);
+        printValuesGreaterThanMean(values);
     }
 
-    private static void printValuesGTAVG(int[] values) {
-        int sum = 0;
-        for (int value : values) {
-            sum += value;
-        }
-        double average = (double) sum / values.length;
+    private static void printValuesGreaterThanMean(int[] values) {
+        double average = getAverage(values);
         for (int value : values) {
             if (value > average) {
                 System.out.print(value + " ");
             }
         }
+    }
+
+    private static double getAverage(int[] values) {
+        int sum = 0;
+        for (int value : values) {
+            sum += value;
+        }
+        return (double) sum / values.length;
     }
 
     private static int[] getCharCode(char[] symbols) {

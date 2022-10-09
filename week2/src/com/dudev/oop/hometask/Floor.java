@@ -1,15 +1,19 @@
-package com.dudev.OOP.hometask;
+package com.dudev.oop.hometask;
 
 public class Floor {
-    int number;
-    Apartment[] apartments;
+    final private int number;
+    final private Apartment[] apartments;
 
     Floor(int number, Apartment[] apartments) {
         this.number = number;
         this.apartments = apartments;
     }
 
-    void print() {
+    public Apartment[] getApartments() {
+        return apartments;
+    }
+
+    public void print() {
         System.out.println("Этаж " + this.number + ", количество квартир " + this.apartments.length);
     }
 }

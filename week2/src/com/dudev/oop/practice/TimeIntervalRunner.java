@@ -1,4 +1,4 @@
-package com.dudev.OOP.practice;
+package com.dudev.oop.practice;
 
 public class TimeIntervalRunner {
     public static void main(String[] args) {

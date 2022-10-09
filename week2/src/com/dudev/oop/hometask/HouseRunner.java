@@ -1,4 +1,4 @@
-package com.dudev.OOP.hometask;
+package com.dudev.oop.hometask;
 
 import java.util.Random;
 
@@ -24,12 +24,12 @@ import java.util.Random;
  * Там же реализовать метод printAllInformation, который на вход принимает объект типа дом, и выводит информацию о нем, его этажах, квартирах и комнатах, вызывая методы print.
  */
 public class HouseRunner {
+    final private static int HOUSE_NUMBER = 1;
+    final private static int FLOORS_AMOUNT = 5;
+    final private static int APARTMENT_AMOUNT = 3;
+    final private static int ROOMS_AMOUNT = 3;
     public static void main(String[] args) {
-        int houseNumber = 1;
-        int floorsAmount = 5;
-        int apartmentsAmount = 3;
-        int roomsAmount = 3;
-        House house = generateHouse(houseNumber, floorsAmount, apartmentsAmount, roomsAmount);
+        House house = generateHouse(HOUSE_NUMBER, FLOORS_AMOUNT, APARTMENT_AMOUNT, ROOMS_AMOUNT);
         house.printAllInformation();
     }
 

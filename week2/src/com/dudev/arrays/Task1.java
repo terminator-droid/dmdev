@@ -13,20 +13,25 @@ public class Task1 {
     }
 
     private static int[] deleteNegative(int[] values) {
-        int positiveArrayLen = 0;
-        for (int value : values) {
-            if (value >= 0) {
-                positiveArrayLen++;
-            }
-        }
-        int[] postitiveArray = new int[positiveArrayLen];
+        int positiveArrayLength = getPositiveArrayLength(values);
+        int[] postitiveArray = new int[positiveArrayLength];
         int positiveArrayIndex = 0;
         for (int value : values) {
             if (value >= 0) {
-                postitiveArray[positiveArrayIndex++] = value * positiveArrayLen;
+                postitiveArray[positiveArrayIndex++] = value * positiveArrayLength;
             }
         }
         return postitiveArray;
+    }
+
+    private static int getPositiveArrayLength(int[] values) {
+        int positiveArrayLength = 0;
+        for (int value : values) {
+            if (value >= 0) {
+                positiveArrayLength++;
+            }
+        }
+        return positiveArrayLength;
     }
 
     private static void printArray(int[] values) {

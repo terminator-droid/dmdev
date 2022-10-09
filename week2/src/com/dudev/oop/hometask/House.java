@@ -1,15 +1,15 @@
-package com.dudev.OOP.hometask;
+package com.dudev.oop.hometask;
 
 public class House {
-    int number;
-    Floor[] floors;
+    final private int number;
+    final private Floor[] floors;
 
     House(int number, Floor[] floors) {
         this.number = number;
         this.floors = floors;
     }
 
-    void print() {
+    public void print() {
         System.out.println("Дом " + this.number + ", количество этажей " + this.floors.length);
     }
 
@@ -17,9 +17,9 @@ public class House {
         this.print();
         for (Floor floor : floors) {
             floor.print();
-            for (Apartment apartment : floor.apartments) {
+            for (Apartment apartment : floor.getApartments()) {
                 apartment.print();
-                for (Room room : apartment.rooms) {
+                for (Room room : apartment.getRooms()) {
                     room.print();
                 }
             }
