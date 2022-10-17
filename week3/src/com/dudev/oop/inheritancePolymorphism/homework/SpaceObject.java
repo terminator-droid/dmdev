@@ -20,7 +20,6 @@ public abstract class SpaceObject implements Gravitational, Printable{
         return Math.sqrt(Math.pow(coordinates.getX() - spaceObject.coordinates.getX(), 2) + Math.pow(coordinates.getY() - spaceObject.coordinates.getY(), 2) + Math.pow(coordinates.getZ() - spaceObject.coordinates.getZ(), 2));
     }
 
-
     public Coordinates getCoordinates() {
         return coordinates;
     }

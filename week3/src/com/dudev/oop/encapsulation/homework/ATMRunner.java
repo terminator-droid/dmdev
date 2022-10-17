@@ -8,7 +8,7 @@ public class ATMRunner {
         atm.printBalance();
         atm.insertMoney(100, 101, 10);
         atm.printBalance();
-        atm.fetchMoney(6140);
+        atm.fetchMoney(30);
         atm.printBalance();
     }
 }
