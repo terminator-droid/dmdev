@@ -33,7 +33,9 @@ public class MageRocket extends Thread {
                 e.printStackTrace();
             }
         }
-        System.out.printf("\nПобедили маги %s", Mages.getWinner().name());
+        if (mages.isWinner()) {
+            System.out.printf("\nПобедили маги %s", mages.getRace());
+        }
     }
 
     private List<Crystal> mineCrystals() {
@@ -48,9 +50,8 @@ public class MageRocket extends Thread {
                     crystalsGot.add(crystalPlanet.removeCrystal(RandomUtil.getRandomInt(crystalPlanet.size())));
                 }
             }
-            System.out.printf("\nУ %s магов %d красных кристаллов, %d белых кристаллов", mages.name(),
-                    mages.getNumberOfRedCrystals(), mages.getNumberOfWhiteCrystals());
-            System.out.printf("\nМаги %s добыли следующие кристаллы:", mages.name());
+            System.out.printf("\nУ %s магов %s", mages.getRace(), mages);
+            System.out.printf("\nМаги %s добыли следующие кристаллы:", mages.getRace());
             crystalsGot.stream()
                     .collect(Collectors.toMap(Function.identity(), crystal -> 1, Integer::sum))
                     .forEach((k, v) -> System.out.printf("\n%s - %s", k, v));
