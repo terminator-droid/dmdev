@@ -20,6 +20,5 @@ public class CrystalDemo {
 
         ThreadUtil.startThreads(day, crystalFactory, mageRocketFireMages, mageRocketWaterMages);
         ThreadUtil.joinThreads(day, crystalFactory, mageRocketFireMages, mageRocketWaterMages);
-
     }
 }
