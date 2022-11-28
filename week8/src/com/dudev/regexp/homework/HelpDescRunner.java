@@ -1,6 +1,5 @@
 package com.dudev.regexp.homework;
 
-import com.dudev.regexp.homework.model.Row;
 import com.dudev.regexp.homework.model.RowFromLog;
 import com.dudev.regexp.homework.model.RowToLog;
 import com.dudev.regexp.homework.model.User;
